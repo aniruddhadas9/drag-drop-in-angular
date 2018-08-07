@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dragdrop',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DragdropComponent implements OnInit {
 
-  constructor() {
+  constructor(private elementRef: ElementRef) {
   }
 
   ngOnInit() {
@@ -23,20 +23,22 @@ export class DragdropComponent implements OnInit {
 
   drop(ev, target) {
     ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
+    const data = ev.dataTransfer.getData("text");
 
-    if(target === 'drop') {
-      ev.target.appendChild(document.getElementById(data + 'div'));
-      document.getElementById(data).style.display = 'none';
+    if (target === 'drop') {
 
-    } else if(target === 'drag') {
-      const id = data.substring(0, data.length-3);
-      document.getElementById(id).style.display = '';
-      const element = document.getElementById(data);
-      const holder = document.getElementById('holder');
+      ev.target.appendChild(this.elementRef.nativeElement.querySelector('#' + data + 'div'));
+      this.elementRef.nativeElement.querySelector('#' + data).style.display = 'none';
+
+    } else if (target === 'drag') {
+
+      const id = data.substring(0, data.length - 3);
+      this.elementRef.nativeElement.querySelector('#' + id).style.display = '';
+      const element = this.elementRef.nativeElement.querySelector('#' + data);
+      const holder = this.elementRef.nativeElement.querySelector('#holder');
       holder.appendChild(element);
-    }
 
+    }
   }
 
 }

@@ -27,10 +27,7 @@ export class AppComponent {
   public columnOneLinks;
   public columnTwoLinks;
 
-  constructor(
-    private httpClient: HttpClient,
-    private modalService: NgbModal,
-  ) {
+  constructor() {
 
     this.middleButton = {
       display: false,
