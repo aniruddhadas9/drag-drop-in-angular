@@ -1,0 +1,24 @@
+<cfs-header
+  [logo]="'candilogo_icon32x32.png'"
+  [leftLinks]="headerLeftLinks"
+  [middleButton]="middleButton"
+  [brand]="headerBrand"
+  (middleButtonClick)="openLocationChangeModel($event)">
+</cfs-header>
+
+<cfs-alerts></cfs-alerts>
+
+<div class="container">
+  <app-dragdrop></app-dragdrop>
+  <router-outlet></router-outlet>
+</div>
+
+<cfs-footer
+  [year]="year"
+  [social]="social"
+  [brand]="brand"
+  [contact]="contact"
+  [message]="message"
+  [columnOneLinks]="columnOneLinks"
+  [columnTwoLinks]="columnTwoLinks">
+</cfs-footer>

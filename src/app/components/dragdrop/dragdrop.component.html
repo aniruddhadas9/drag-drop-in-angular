@@ -1,0 +1,87 @@
+<div class="container">
+  <h3>Drag and Drop experiment</h3>
+
+  <div class="drop-container">
+    <div class="card">
+      <div class="card-body drop" (drop)="drop($event, 'drop')" (dragover)="allowDrop($event, 'drop')">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="drag" (drop)="drop($event, 'drag')" (dragover)="allowDrop($event, 'drag')">
+    <div class="row">
+      <div col>
+        <button class="btn btn-success" draggable="true" id="add" (dragstart)="drag($event)">add</button>
+      </div>
+      <div col>
+        <button class="btn btn-success" draggable="true" id="substract" (dragstart)="drag($event)">Substract</button>
+      </div>
+      <div col>
+        <button class="btn btn-success" draggable="true" id="foo" (dragstart)="drag($event)">Foo</button>
+      </div>
+      <div col>
+        <button class="btn btn-success" draggable="true" id="custom" (dragstart)="drag($event)">DoSomethingComplicated
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="d-none" id="holder">
+
+  <div class="row" id="adddiv" draggable="true" (dragstart)="drag($event)">
+    <div col>
+      <button class="btn btn-warning">add</button>
+    </div>
+    <div col>
+      <input type="text" class="form-control" placeholder="First value"/>
+    </div>
+    <div col>
+      <input type="text" class="form-control" placeholder="Secound value"/>
+    </div>
+  </div>
+
+  <div class="row" id="substractdiv" draggable="true" (dragstart)="drag($event)">
+    <div col>
+      <button class="btn btn-warning">Substract</button>
+    </div>
+    <div col>
+      <input type="text" class="form-control" placeholder="First value"/>
+    </div>
+    <div col>
+      <input type="text" class="form-control" placeholder="Secound value"/>
+    </div>
+  </div>
+
+  <div class="row" id="foodiv" draggable="true" (dragstart)="drag($event)">
+    <div col>
+      <button class="btn btn-warning">Foo</button>
+    </div>
+    <div col>
+      <input type="text" class="form-control" placeholder="Foo message passing"/>
+    </div>
+  </div>
+
+  <div class="row" id="customdiv" draggable="true" (dragstart)="drag($event)">
+    <div col>
+      <button class="btn btn-warning">DoSomethingComplicated</button>
+    </div>
+    <div col>
+      <input type="text" class="form-control" placeholder="Complicate value 1"/>
+    </div>
+    <div col>
+      <input type="text" class="form-control" placeholder="Complicate value 2"/>
+    </div>
+    <div col>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+        <label class="form-check-label" for="invalidCheck2">
+          Agree to terms and conditions
+        </label>
+      </div>
+    </div>
+  </div>
+
+</div>

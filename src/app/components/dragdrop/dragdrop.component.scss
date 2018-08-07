@@ -1,0 +1,37 @@
+.container {
+  .drop-container {
+    margin: 10px 0;
+    .card {
+      .card-body {
+        min-height: 300px;
+        .row {
+          margin-bottom: 7px;
+          div {
+            margin-right: 7px;
+          }
+          input {
+            margin-right: 7px;
+          }
+        }
+      }
+    }
+  }
+  .drag {
+    padding-left: 10px;
+    .row {
+      button {
+        margin-right: 7px;
+      }
+    }
+  }
+
+  .d-none {
+    div {
+      div {
+        input {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+}
