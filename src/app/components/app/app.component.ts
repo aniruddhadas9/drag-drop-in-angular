@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {Component} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -46,7 +46,7 @@ export class AppComponent {
     this.year = '2018';
     this.social = {
       facebook: 'http://www.facebook.com/aniruddhadas9',
-      googlePlus: 'http://www.plus.google.com/aniruddhadas9',
+      googlePlus: 'https://plus.google.com/u/0/106628102077137706189',
       twitter: 'http://www.twitter.com/aniruddhadas9',
       linkedin: 'https://www.linkedin.com/in/aniruddhadas9/',
     };
@@ -73,6 +73,10 @@ export class AppComponent {
     this.columnTwoLinks = [
       {label: 'profile', url: '/profile'}
     ];
+
+  }
+
+  openLocationChangeModel(event) {
 
   }
 

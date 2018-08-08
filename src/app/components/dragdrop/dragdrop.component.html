@@ -3,13 +3,13 @@
 
   <div class="drop-container">
     <div class="card">
-      <div class="card-body drop" (drop)="drop($event, 'drop')" (dragover)="allowDrop($event, 'drop')">
+      <div class="card-body drop" (drop)="drop($event, 'drop')" (dragover)="allowDrop($event)">
 
       </div>
     </div>
   </div>
 
-  <div class="drag" (drop)="drop($event, 'drag')" (dragover)="allowDrop($event, 'drag')">
+  <div class="drag" (drop)="drop($event, 'drag')" (dragover)="allowDrop($event)">
     <div class="row">
       <div col>
         <button class="btn btn-success" draggable="true" id="add" (dragstart)="drag($event)">add</button>
@@ -25,6 +25,16 @@
         </button>
       </div>
     </div>
+  </div>
+
+  <div class="jumbotron">
+    <h5>Use instruction</h5>
+    <p class="lead">This functionality is developed for experimental purpose. Below are the features available</p>
+    <hr class="my-4">
+    <ul>
+      <li>You can drag the button to the draggable area. Once it dragged, it will draw the form or operation</li>
+      <li>If you don't want, you can also drag back to the button area</li>
+    </ul>
   </div>
 
 </div>
@@ -85,3 +95,4 @@
   </div>
 
 </div>
+
